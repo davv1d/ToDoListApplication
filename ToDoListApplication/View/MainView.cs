@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToDoListApplication.Controller;
-using ToDoListApplication.Model;
 using ToDoListApplication.View;
 using ToDoListApplication.View.UserControls;
-using Task = ToDoListApplication.Model.Task;
 
 namespace ToDoListApplication
 {
@@ -65,7 +56,7 @@ namespace ToDoListApplication
 
         private void panel3_MouseMove(object sender, MouseEventArgs e)
         {
-            if(move)
+            if (move)
             {
                 this.SetDesktopLocation(MousePosition.X - moveX, MousePosition.Y - moveY);
             }

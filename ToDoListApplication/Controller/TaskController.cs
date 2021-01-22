@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using ToDoListApplication.Model;
-using ToDoListApplication.View;
-using ToDoListApplication.View.UserControls;
 
 namespace ToDoListApplication.Controller
 {
@@ -22,23 +18,16 @@ namespace ToDoListApplication.Controller
         public Form Start()
         {
             mainView.InitializeView();
-            return (Form) mainView;
+            return (Form)mainView;
         }
 
         public void DeleteTask(int id)
         {
-            taskService.DeleteTask(id);
-            mainView.getTaskView().RemoveToDoItem(id);
+            taskService.DeleteTask(id)
+                .Effect(
+                    value => mainView.getTaskView().RemoveToDoItem(id),
+                    error => mainView.getTaskView().ShowErrorMessageBox(error));
         }
-
-        public void DeleteTask2(int id)
-        {
-            var res = taskService.DeleteTask2(id);
-            res.Effect(
-                value => mainView.getTaskView().RemoveToDoItem(id),
-                error => mainView.getTaskView().ShowErrorMessageBox(error));
-        }
-
 
         public void ShowTasksForSpecificDate(DateTime searchDate)
         {
@@ -48,15 +37,24 @@ namespace ToDoListApplication.Controller
 
         public void AddTask(Task task)
         {
-            taskService.SaveTask(task);
-            mainView.getTaskView().ClearTextBoxes();
-            mainView.getTaskView().AddToDoItem(task);
+            taskService.SaveTask(task)
+                .Effect(
+                    t =>
+                    {
+                        mainView.getTaskView().ClearTextBoxes();
+                        mainView.getTaskView().AddToDoItem(t);
+                    },
+                    error => mainView.getTaskView().ShowErrorMessageBox(error)
+                );
         }
 
         public void EditTask(Task editedTask)
         {
-            taskService.UpdateTask(editedTask);
-            mainView.getTaskView().EditSpecificItem(editedTask);
+            taskService.UpdateTask(editedTask)
+                .Effect(
+                    t => mainView.getTaskView().EditSpecificItem(editedTask),
+                    error => mainView.getTaskView().ShowErrorMessageBox(error)
+                );
         }
     }
 }

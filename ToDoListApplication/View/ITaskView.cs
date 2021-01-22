@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using ToDoListApplication.Controller;
+﻿using System.Collections.Generic;
 using ToDoListApplication.Model;
 
 namespace ToDoListApplication.View
