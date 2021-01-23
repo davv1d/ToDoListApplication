@@ -33,8 +33,7 @@ namespace ToDoListApplication.Model.Tests
         {
             //Given
             var task = new Task() { TaskId = 0, Title = "test 1", Description = "test 1", ScheduledDate = DateTime.Now };
-            List<Task> tasks = new List<Task>();
-            tasks.Add(task);
+            List<Task> tasks = new List<Task> { task };
             var mockSet = GetMockDbSet(tasks);
             var mockContext = new Mock<TaskDbContext>();
             mockContext.Setup(m => m.Tasks).Returns(mockSet.Object);
@@ -94,8 +93,7 @@ namespace ToDoListApplication.Model.Tests
         {
             //Given   
             var task = new Task() { TaskId = 1, Title = "test 1", Description = "test 1", ScheduledDate = DateTime.Now };
-            List<Task> tasks = new List<Task>();
-            tasks.Add(task);
+            List<Task> tasks = new List<Task> { task };
             var mockSet = GetMockDbSet(tasks);
             var mockContext = new Mock<TaskDbContext>();
             mockContext.Setup(m => m.Tasks).Returns(mockSet.Object);
@@ -118,11 +116,7 @@ namespace ToDoListApplication.Model.Tests
             var task2 = new Task() { TaskId = 2, Title = "test 2", Description = "test 2", ScheduledDate = date.AddDays(2) };
             var task3 = new Task() { TaskId = 3, Title = "test 3", Description = "test 3", ScheduledDate = date };
             var task4 = new Task() { TaskId = 4, Title = "test 4", Description = "test 4", ScheduledDate = date };
-            List<Task> tasks = new List<Task>();
-            tasks.Add(task1);
-            tasks.Add(task2);
-            tasks.Add(task3);
-            tasks.Add(task4);
+            List<Task> tasks = new List<Task> { task1, task2, task3, task4 };
             var mockSet = GetMockDbSet(tasks);
             var mockContext = new Mock<TaskDbContext>();
             mockContext.Setup(m => m.Tasks).Returns(mockSet.Object);
@@ -144,11 +138,7 @@ namespace ToDoListApplication.Model.Tests
             var task2 = new Task() { TaskId = 2, Title = "test 2", Description = "test 2", ScheduledDate = date.AddDays(2) };
             var task3 = new Task() { TaskId = 3, Title = "test 3", Description = "test 3", ScheduledDate = date };
             var task4 = new Task() { TaskId = 4, Title = "test 4", Description = "test 4", ScheduledDate = date };
-            List<Task> tasks = new List<Task>();
-            tasks.Add(task1);
-            tasks.Add(task2);
-            tasks.Add(task3);
-            tasks.Add(task4);
+            List<Task> tasks = new List<Task> { task1, task2, task3, task4 };
             var mockSet = GetMockDbSet(tasks);
             var mockContext = new Mock<TaskDbContext>();
             mockContext.Setup(m => m.Tasks).Returns(mockSet.Object);

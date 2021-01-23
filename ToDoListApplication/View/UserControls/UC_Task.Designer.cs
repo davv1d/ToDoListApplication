@@ -1,7 +1,7 @@
 ﻿
 namespace ToDoListApplication
 {
-    partial class ToDoItem
+    partial class UC_Task
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ToDoListApplication
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToDoItem));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Task));
             this.btnEdit = new System.Windows.Forms.Button();
             this.labelTitle = new System.Windows.Forms.Label();
             this.labelDesc = new System.Windows.Forms.Label();

@@ -7,8 +7,8 @@ namespace ToDoListApplication
 {
     public partial class EditView : Form
     {
-        private Task task;
-        private ITaskController taskController;
+        private readonly Task task;
+        private readonly ITaskController taskController;
         public EditView(ITaskController taskController, Task task)
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace ToDoListApplication
             };
 
             taskController.EditTask(editedTask);
-            this.Close();
+            this.Dispose();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

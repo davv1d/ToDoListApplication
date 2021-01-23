@@ -6,11 +6,11 @@ using ToDoListApplication.Model;
 
 namespace ToDoListApplication.View.UserControls
 {
-    public partial class UC_Tasks : UserControl, ITaskView
+    public partial class UC_Day : UserControl, IDayView
     {
-        private DateTime selectedDate;
-        private ITaskController taskController;
-        public UC_Tasks(DateTime selectedDate, ITaskController taskController)
+        private readonly DateTime selectedDate;
+        private readonly ITaskController taskController;
+        public UC_Day(DateTime selectedDate, ITaskController taskController)
         {
             InitializeComponent();
             this.selectedDate = selectedDate;
@@ -18,17 +18,17 @@ namespace ToDoListApplication.View.UserControls
             this.taskController = taskController;
         }
 
-        public void CreateToDoItems(List<Task> tasks)
+        public void CreateTasksControlsView(List<Task> tasks)
         {
             flowLayoutPanelTasks.Controls.Clear();
             foreach (Task task in tasks)
             {
-                var item = new ToDoItem(task, taskController);
+                var item = new UC_Task(task, taskController);
                 flowLayoutPanelTasks.Controls.Add(item);
             }
         }
 
-        public void RemoveToDoItem(int id)
+        public void RemoveTaskControl(int id)
         {
             foreach (Control item in flowLayoutPanelTasks.Controls)
             {
@@ -56,20 +56,20 @@ namespace ToDoListApplication.View.UserControls
             textBoxDesc.Clear();
         }
 
-        public void AddToDoItem(Task task)
+        public void AddTaskControl(Task task)
         {
-            var item = new ToDoItem(task, taskController);
+            var item = new UC_Task(task, taskController);
             flowLayoutPanelTasks.Controls.Add(item);
         }
 
-        public void EditSpecificItem(Task task)
+        public void EditSpecificTaskControl(Task task)
         {
             foreach (Control item in flowLayoutPanelTasks.Controls)
             {
                 if (item.Name == task.TaskId.ToString())
                 {
-                    IToDoItem toDoItem = (IToDoItem)item;
-                    toDoItem.EditItem(task);
+                    ITaskView toDoItem = (ITaskView)item;
+                    toDoItem.EditTaskLabels(task);
                 }
             }
         }

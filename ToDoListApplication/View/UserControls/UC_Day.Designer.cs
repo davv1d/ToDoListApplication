@@ -1,7 +1,7 @@
 ﻿
 namespace ToDoListApplication.View.UserControls
 {
-    partial class UC_Tasks
+    partial class UC_Day
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ToDoListApplication.View.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Tasks));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Day));
             this.labelDate = new System.Windows.Forms.Label();
             this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.textBoxDesc = new System.Windows.Forms.TextBox();

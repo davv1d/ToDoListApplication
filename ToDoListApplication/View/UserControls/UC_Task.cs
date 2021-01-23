@@ -6,16 +6,16 @@ using ToDoListApplication.View;
 
 namespace ToDoListApplication
 {
-    public partial class ToDoItem : UserControl, IToDoItem
+    public partial class UC_Task : UserControl, ITaskView
     {
-        private ITaskController taskController;
-        private Task task;
-        public ToDoItem()
+        private readonly ITaskController taskController;
+        private readonly Task task;
+        public UC_Task()
         {
             InitializeComponent();
         }
 
-        public ToDoItem(Task task, ITaskController taskController)
+        public UC_Task(Task task, ITaskController taskController)
         {
             InitializeComponent();
             this.task = task;
@@ -47,7 +47,7 @@ namespace ToDoListApplication
             form.ShowDialog();
         }
 
-        public void EditItem(Task task)
+        public void EditTaskLabels(Task task)
         {
             this.labelTitle.Text = task.Title;
             this.labelDesc.Text = task.Description;

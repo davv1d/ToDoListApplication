@@ -7,8 +7,8 @@ namespace ToDoListApplication.Controller
 {
     public class TaskController : ITaskController
     {
-        private IMainView mainView;
-        private ITaskService taskService;
+        private readonly IMainView mainView;
+        private readonly ITaskService taskService;
 
         public TaskController(ITaskService taskService)
         {
@@ -25,14 +25,14 @@ namespace ToDoListApplication.Controller
         {
             taskService.DeleteTask(id)
                 .Effect(
-                    value => mainView.getTaskView().RemoveToDoItem(id),
-                    error => mainView.getTaskView().ShowErrorMessageBox(error));
+                    value => mainView.getDayView().RemoveTaskControl(id),
+                    error => mainView.getDayView().ShowErrorMessageBox(error));
         }
 
         public void ShowTasksForSpecificDate(DateTime searchDate)
         {
             List<Task> tasks = taskService.GetTasksByDate(searchDate);
-            mainView.getTaskView().CreateToDoItems(tasks);
+            mainView.getDayView().CreateTasksControlsView(tasks);
         }
 
         public void AddTask(Task task)
@@ -41,10 +41,10 @@ namespace ToDoListApplication.Controller
                 .Effect(
                     t =>
                     {
-                        mainView.getTaskView().ClearTextBoxes();
-                        mainView.getTaskView().AddToDoItem(t);
+                        mainView.getDayView().ClearTextBoxes();
+                        mainView.getDayView().AddTaskControl(t);
                     },
-                    error => mainView.getTaskView().ShowErrorMessageBox(error)
+                    error => mainView.getDayView().ShowErrorMessageBox(error)
                 );
         }
 
@@ -52,8 +52,8 @@ namespace ToDoListApplication.Controller
         {
             taskService.UpdateTask(editedTask)
                 .Effect(
-                    t => mainView.getTaskView().EditSpecificItem(editedTask),
-                    error => mainView.getTaskView().ShowErrorMessageBox(error)
+                    t => mainView.getDayView().EditSpecificTaskControl(editedTask),
+                    error => mainView.getDayView().ShowErrorMessageBox(error)
                 );
         }
     }

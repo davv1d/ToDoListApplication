@@ -6,7 +6,7 @@ namespace ToDoListApplication.Model
 {
     public class TaskService : ITaskService
     {
-        private TaskDbContext db;
+        private readonly TaskDbContext db;
 
         public TaskService(TaskDbContext taskDbContext)
         {

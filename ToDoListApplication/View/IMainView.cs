@@ -7,6 +7,6 @@ namespace ToDoListApplication
     {
         Form InitializeView();
 
-        ITaskView getTaskView();
+        IDayView getDayView();
     }
 }

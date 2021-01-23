@@ -10,28 +10,28 @@ namespace ToDoListApplication
     {
         private DateTime selectedDate;
         private ITaskController taskController;
-        private UC_Tasks ucTasks;
+        private UC_Day ucTasks;
         private bool move;
         private int moveX;
         private int moveY;
         public MainView(ITaskController taskController)
         {
+            InitializeComponent();
             this.taskController = taskController;
         }
         public Form InitializeView()
         {
-            InitializeComponent();
             AddControlsToPanel(new UC_Home());
             return this;
         }
-        public ITaskView getTaskView()
+        public IDayView getDayView()
         {
             return this.ucTasks;
         }
         private void btnShowDay_Click(object sender, EventArgs e)
         {
             selectedDate = dateTimePicker1.Value;
-            ucTasks = new UC_Tasks(selectedDate, taskController);
+            ucTasks = new UC_Day(selectedDate, taskController);
             taskController.ShowTasksForSpecificDate(selectedDate);
             AddControlsToPanel(ucTasks);
         }
