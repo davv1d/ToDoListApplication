@@ -45,7 +45,7 @@ namespace ToDoListApplication.View.UserControls
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelDate.ForeColor = System.Drawing.Color.White;
+            this.labelDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.labelDate.Location = new System.Drawing.Point(34, 31);
             this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
@@ -57,7 +57,7 @@ namespace ToDoListApplication.View.UserControls
             // 
             this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.textBoxTitle.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxTitle.Location = new System.Drawing.Point(178, 483);
+            this.textBoxTitle.Location = new System.Drawing.Point(178, 502);
             this.textBoxTitle.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTitle.MaxLength = 35;
             this.textBoxTitle.Name = "textBoxTitle";
@@ -69,12 +69,11 @@ namespace ToDoListApplication.View.UserControls
             this.textBoxDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.textBoxDesc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxDesc.Location = new System.Drawing.Point(178, 523);
+            this.textBoxDesc.Location = new System.Drawing.Point(178, 542);
             this.textBoxDesc.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxDesc.MaxLength = 90;
-            this.textBoxDesc.Multiline = true;
+            this.textBoxDesc.MaxLength = 80;
             this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(681, 70);
+            this.textBoxDesc.Size = new System.Drawing.Size(681, 32);
             this.textBoxDesc.TabIndex = 11;
             // 
             // btnAddTask
@@ -87,12 +86,14 @@ namespace ToDoListApplication.View.UserControls
             this.btnAddTask.ForeColor = System.Drawing.Color.White;
             this.btnAddTask.Image = ((System.Drawing.Image)(resources.GetObject("btnAddTask.Image")));
             this.btnAddTask.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddTask.Location = new System.Drawing.Point(741, 610);
-            this.btnAddTask.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddTask.Location = new System.Drawing.Point(726, 597);
+            this.btnAddTask.Margin = new System.Windows.Forms.Padding(0);
             this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(118, 35);
-            this.btnAddTask.TabIndex = 13;
-            this.btnAddTask.Text = "    Add Task";
+            this.btnAddTask.Padding = new System.Windows.Forms.Padding(3);
+            this.btnAddTask.Size = new System.Drawing.Size(133, 40);
+            this.btnAddTask.TabIndex = 0;
+            this.btnAddTask.Text = "  Add Task";
+            this.btnAddTask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddTask.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddTask.UseVisualStyleBackColor = false;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
@@ -101,8 +102,8 @@ namespace ToDoListApplication.View.UserControls
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 486);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.label1.Location = new System.Drawing.Point(34, 505);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 23);
@@ -113,8 +114,8 @@ namespace ToDoListApplication.View.UserControls
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 528);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.label2.Location = new System.Drawing.Point(34, 547);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 23);
@@ -126,10 +127,10 @@ namespace ToDoListApplication.View.UserControls
             this.flowLayoutPanelTasks.AutoScroll = true;
             this.flowLayoutPanelTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.flowLayoutPanelTasks.Controls.Add(this.panel4);
-            this.flowLayoutPanelTasks.Location = new System.Drawing.Point(38, 76);
+            this.flowLayoutPanelTasks.Location = new System.Drawing.Point(19, 76);
             this.flowLayoutPanelTasks.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanelTasks.Name = "flowLayoutPanelTasks";
-            this.flowLayoutPanelTasks.Size = new System.Drawing.Size(852, 381);
+            this.flowLayoutPanelTasks.Size = new System.Drawing.Size(899, 381);
             this.flowLayoutPanelTasks.TabIndex = 8;
             // 
             // panel4
@@ -141,7 +142,8 @@ namespace ToDoListApplication.View.UserControls
             // 
             // UC_Tasks
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.textBoxTitle);

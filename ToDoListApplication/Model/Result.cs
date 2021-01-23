@@ -9,6 +9,7 @@ namespace ToDoListApplication.Model
         }
 
         public abstract void Effect(Action<V> success, Action<String> failure);
+        public abstract bool IsFailure();
 
         private class Failure : Result<V>
         {
@@ -22,6 +23,11 @@ namespace ToDoListApplication.Model
             public override void Effect(Action<V> success, Action<string> failure)
             {
                 failure(message);
+            }
+
+            public override bool IsFailure()
+            {
+                return true;
             }
         }
 
@@ -37,6 +43,11 @@ namespace ToDoListApplication.Model
             public override void Effect(Action<V> success, Action<string> failure)
             {
                 success(value);
+            }
+
+            public override bool IsFailure()
+            {
+                return false;
             }
         }
 

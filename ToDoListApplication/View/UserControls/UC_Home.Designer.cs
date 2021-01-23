@@ -38,13 +38,14 @@ namespace ToDoListApplication.View.UserControls
             this.label1.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(272, 283);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 77);
+            this.label1.Size = new System.Drawing.Size(432, 93);
             this.label1.TabIndex = 0;
             this.label1.Text = "WELCOME";
             // 
             // UC_Home
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));

@@ -2,12 +2,12 @@
 
 namespace ToDoListApplication.Model
 {
-    class TaskDbContext : DbContext
+    public class TaskDbContext : DbContext
     {
         public TaskDbContext() : base("name=ToDoListDbConnection")
         {
 
         }
-        public DbSet<Task> Tasks { get; set; }
+        public virtual DbSet<Task> Tasks { get; set; }
     }
 }

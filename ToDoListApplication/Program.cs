@@ -12,7 +12,7 @@ namespace ToDoListApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ITaskService taskService = new TaskService();
+            ITaskService taskService = new TaskService(new TaskDbContext());
             ITaskController taskController = new TaskController(taskService);
             Application.Run(taskController.Start());
         }

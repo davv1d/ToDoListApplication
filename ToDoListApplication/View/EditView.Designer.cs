@@ -47,6 +47,7 @@ namespace ToDoListApplication
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.label1.Location = new System.Drawing.Point(52, 83);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -56,27 +57,29 @@ namespace ToDoListApplication
             // 
             // textBoxTitle
             // 
+            this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.textBoxTitle.Location = new System.Drawing.Point(181, 79);
             this.textBoxTitle.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTitle.MaxLength = 35;
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(367, 28);
+            this.textBoxTitle.Size = new System.Drawing.Size(750, 28);
             this.textBoxTitle.TabIndex = 1;
             // 
             // textBoxDesc
             // 
+            this.textBoxDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.textBoxDesc.Location = new System.Drawing.Point(181, 131);
             this.textBoxDesc.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxDesc.MaxLength = 90;
-            this.textBoxDesc.Multiline = true;
+            this.textBoxDesc.MaxLength = 80;
             this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(367, 80);
+            this.textBoxDesc.Size = new System.Drawing.Size(750, 28);
             this.textBoxDesc.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.label2.Location = new System.Drawing.Point(52, 131);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -90,7 +93,7 @@ namespace ToDoListApplication
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnEdit.Location = new System.Drawing.Point(441, 240);
+            this.btnEdit.Location = new System.Drawing.Point(824, 184);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(107, 39);
@@ -106,7 +109,7 @@ namespace ToDoListApplication
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 358);
+            this.panel1.Size = new System.Drawing.Size(10, 315);
             this.panel1.TabIndex = 5;
             // 
             // panel2
@@ -115,7 +118,7 @@ namespace ToDoListApplication
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 358);
+            this.panel2.Size = new System.Drawing.Size(10, 315);
             this.panel2.TabIndex = 6;
             // 
             // panel3
@@ -124,25 +127,25 @@ namespace ToDoListApplication
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(10, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(608, 10);
+            this.panel3.Size = new System.Drawing.Size(961, 10);
             this.panel3.TabIndex = 6;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(608, 10);
+            this.panel4.Location = new System.Drawing.Point(961, 10);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 348);
+            this.panel4.Size = new System.Drawing.Size(10, 305);
             this.panel4.TabIndex = 7;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(10, 348);
+            this.panel5.Location = new System.Drawing.Point(10, 305);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(598, 10);
+            this.panel5.Size = new System.Drawing.Size(951, 10);
             this.panel5.TabIndex = 8;
             // 
             // btnCancel
@@ -151,7 +154,7 @@ namespace ToDoListApplication
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnCancel.Location = new System.Drawing.Point(326, 240);
+            this.btnCancel.Location = new System.Drawing.Point(709, 184);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 39);
@@ -162,9 +165,10 @@ namespace ToDoListApplication
             // 
             // EditView
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(618, 358);
+            this.ClientSize = new System.Drawing.Size(971, 315);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);

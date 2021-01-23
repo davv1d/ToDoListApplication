@@ -8,9 +8,9 @@ namespace ToDoListApplication.Model
     {
         private TaskDbContext db;
 
-        public TaskService()
+        public TaskService(TaskDbContext taskDbContext)
         {
-            this.db = new TaskDbContext();
+            this.db = taskDbContext;
         }
 
         public Result<Task> SaveTask(Task task)

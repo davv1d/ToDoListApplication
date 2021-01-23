@@ -66,5 +66,10 @@ namespace ToDoListApplication
         {
             move = false;
         }
+
+        private void btnMinimalize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
