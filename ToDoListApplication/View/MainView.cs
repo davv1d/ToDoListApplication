@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using ToDoListApplication.Controller;
 using ToDoListApplication.View;
@@ -34,6 +35,8 @@ namespace ToDoListApplication
             ucTasks = new UC_Day(selectedDate, taskController);
             taskController.ShowTasksForSpecificDate(selectedDate);
             AddControlsToPanel(ucTasks);
+            var task = new Task(() => { this.btnShowDay.Text = "teert"; });
+           // task.RunSynchronously();
         }
 
         private void AddControlsToPanel(Control c)

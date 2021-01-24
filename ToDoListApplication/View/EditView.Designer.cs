@@ -98,7 +98,7 @@ namespace ToDoListApplication
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(107, 39);
             this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Save";
+            this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 

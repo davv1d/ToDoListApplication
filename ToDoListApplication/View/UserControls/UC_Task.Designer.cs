@@ -75,7 +75,7 @@ namespace ToDoListApplication
             this.labelDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
             this.labelDesc.Location = new System.Drawing.Point(8, 45);
             this.labelDesc.Name = "labelDesc";
-            this.labelDesc.Size = new System.Drawing.Size(68, 23);
+            this.labelDesc.Size = new System.Drawing.Size(54, 18);
             this.labelDesc.TabIndex = 3;
             this.labelDesc.Text = "label1";
             // 
@@ -100,7 +100,7 @@ namespace ToDoListApplication
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // ToDoItem
+            // UC_Task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -111,7 +111,7 @@ namespace ToDoListApplication
             this.Controls.Add(this.btnEdit);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.Name = "ToDoItem";
+            this.Name = "UC_Task";
             this.Padding = new System.Windows.Forms.Padding(5);
             this.Size = new System.Drawing.Size(866, 81);
             this.ResumeLayout(false);

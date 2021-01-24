@@ -20,16 +20,20 @@ namespace ToDoListApplication
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Task editedTask = new Task()
+            string title = textBoxTitle.Text.Trim();
+            if (title.Length > 0)
             {
-                TaskId = task.TaskId,
-                Title = textBoxTitle.Text,
-                Description = textBoxDesc.Text,
-                ScheduledDate = task.ScheduledDate
-            };
+                Task editedTask = new Task()
+                {
+                    TaskId = task.TaskId,
+                    Title = title,
+                    Description = textBoxDesc.Text.Trim(),
+                    ScheduledDate = task.ScheduledDate
+                };
 
-            taskController.EditTask(editedTask);
-            this.Dispose();
+                taskController.EditTask(editedTask);
+                this.Dispose();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
